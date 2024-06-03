@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<<<<<<< HEAD:Index.html
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="left-panel">
+                <img src="logo.png" alt="Logo" class="logo" />
+                <h2>Ingrese el texto aqui</h2>
+                <textarea
+                    id="inputText"
+                    placeholder="Introduce el texto aquí"
+                ></textarea>
+                <div class="buttons">
+                    <button class="encrypt-btn" onclick="encrypt()">
+                        Encriptar
+                    </button>
+                    <button class="decrypt-btn" onclick="decrypt()">
+                        Desencriptar
+                    </button>
+                </div>
+                <p class="note">🔒 Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="right-panel">
+                <div class="output-container">
+                    <textarea
+                        id="outputText"
+                        placeholder="Resultado"
+                    ></textarea>
+                    <button class="copy-btn" onclick="copyText()">
+                        Copiar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+=======
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 1 - Encriptador - ONE</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Encriptador Alura</h1>
+    <div>
+        <h2>Texto de entrada<h2>
+                <textarea name="" id="txa_Entrada" cols="30" rows="10"
+                    placeholder="Ingrese o pegue un texto."></textarea>
+                <button id="btn_Encriptar" disabled="false">Encriptar</button>
+                <button id="btn_Desencriptar" disabled="false">Desencriptar</button>
+    </div>
+
+
+    <div>
+        <h2>Resultado</h2>
+
+
+        <textarea name="" id="txa_Resultado" cols="30" rows="10" placeholder="El resultado se mostrará aqui."
+            readonly></textarea>
+
+        <button id="btn_Limpiar" disabled="true">Limpiar</button>
+
+    </div>
+
+</body>
+
+<script>
+    function mostrarMensajeEnPRD(activado = false) {
+        if (activado) {
+            alert(
+                "Bienvenido a mi proyecto para Oracle One Education \n El proyecto se encuentra en desarrollo."
+            );
+        }
+    }
+
+    mostrarMensajeEnPRD(true);
+</script>
+<script src="./script.js"></script>
+
+>>>>>>> e98dc6445ffd5482072a024813a9ba6730bfcc4a:index.html
+</html>
