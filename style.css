@@ -1,22 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
     margin: 0;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Utilizar toda la altura de la pantalla */
 }
 
 .container {
     display: flex;
+    flex-direction: row; /* Contenedores lado a lado en pantallas grandes */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 1200px;
     overflow: hidden;
-    flex-direction: column;
 }
 
 .left-panel,
@@ -49,8 +50,8 @@ textarea {
 
 .buttons {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    flex-direction: column; /* Botones de arriba a abajo en pantallas pequeñas */
+    align-items: center; /* Centrar horizontalmente */
 }
 
 button {
@@ -59,16 +60,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.encrypt-btn {
-    background-color: #0d47a1;
-    color: white;
-}
-
-.decrypt-btn {
-    background-color: #e3f2fd;
-    color: #0d47a1;
+    margin-bottom: 10px;
 }
 
 .note {
@@ -103,4 +95,32 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Media Queries para hacer la web responsive */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambiado a columna para dispositivos más pequeños */
+    }
+
+    .left-panel,
+    .right-panel {
+        padding: 20px; /* Restaurar el relleno para dispositivos más pequeños */
+    }
+
+    textarea {
+        width: 100%; /* Hacer el textarea ocupar todo el ancho en dispositivos más pequeños */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .buttons {
+        flex-direction: column; /* Cambiado a columna para dispositivos más pequeños */
+        align-items: center; /* Centrar los botones horizontalmente */
+    }
+
+    textarea {
+        height: 80px; /* Reducir la altura del textarea en dispositivos aún más pequeños */
+    }
 }
